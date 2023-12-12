@@ -17,7 +17,7 @@ public class RegistrationController {
     @PostMapping("/confirm")
     public String confirmDetails(@RequestBody UserDetails userDetails){
         //this really does nothing
-        String confirmationMessage = notificationServiceClient.notifyUser(userDetails);
+        String confirmationMessage = "Hello," + userDetails; //notificationServiceClient.notifyUser(userDetails);
         return  confirmationMessage;
     }
 }
